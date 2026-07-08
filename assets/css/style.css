@@ -20,3 +20,41 @@
         }
         .masonry-item:nth-child(3n) { grid-row: span 2; }
         .masonry-item:nth-child(2n) { grid-row: span 1.5; }
+
+        /* Hero Carousel Styles */
+        .hero-carousel {
+            transition: all 0.5s ease;
+        }
+        .carousel-slide {
+            transition: opacity 1s ease-in-out;
+        }
+        .carousel-indicator {
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .carousel-prev,
+        .carousel-next {
+            transition: all 0.3s ease;
+        }
+        .carousel-prev:hover,
+        .carousel-next:hover {
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        /* Subtle zoom animation for active slide */
+        .carousel-slide.opacity-100 .bg-cover {
+            animation: slowZoom 25s ease-in-out infinite alternate;
+        }
+        @keyframes slowZoom {
+            from { transform: scale(1); }
+            to { transform: scale(1.1); }
+        }
+
+        /* Masonry item hover effects */
+        .masonry-item:hover img {
+            transform: scale(1.05);
+            transition: transform 0.7s ease;
+        }
+        .masonry-item img {
+            transition: transform 0.7s ease;
+        }

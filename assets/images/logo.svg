@@ -1,0 +1,125 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Sunset gradient for background circle -->
+    <linearGradient id="sunsetGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF6B35"/>
+      <stop offset="40%" style="stop-color:#F7931E"/>
+      <stop offset="70%" style="stop-color:#8D4B00"/>
+      <stop offset="100%" style="stop-color:#1E293B"/>
+    </linearGradient>
+
+    <!-- Gold gradient for the crocodile -->
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFB77D"/>
+      <stop offset="50%" style="stop-color:#D97706"/>
+      <stop offset="100%" style="stop-color:#8D4B00"/>
+    </linearGradient>
+
+    <!-- Sun glow effect -->
+    <radialGradient id="sunGlow" cx="50%" cy="30%" r="50%">
+      <stop offset="0%" style="stop-color:#FFF8F5"/>
+      <stop offset="30%" style="stop-color:#FFB77D"/>
+      <stop offset="100%" style="stop-color:#D97706;stop-opacity:0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background circle with sunset -->
+  <circle cx="100" cy="100" r="95" fill="url(#sunsetGradient)"/>
+
+  <!-- Sun behind the crocodile -->
+  <circle cx="100" cy="85" r="35" fill="url(#sunGlow)"/>
+
+  <!-- Acacia tree silhouette on left -->
+  <g fill="#1E293B" opacity="0.6">
+    <rect x="25" y="130" width="3" height="45" rx="1"/>
+    <ellipse cx="26" cy="125" rx="15" ry="10" transform="rotate(-15, 26, 125)"/>
+    <ellipse cx="32" cy="128" rx="10" ry="7" transform="rotate(10, 32, 128)"/>
+  </g>
+
+  <!-- Acacia tree silhouette on right (smaller) -->
+  <g fill="#1E293B" opacity="0.5" transform="scale(0.6) translate(180, 55)">
+    <rect x="25" y="130" width="3" height="45" rx="1"/>
+    <ellipse cx="26" cy="125" rx="15" ry="10" transform="rotate(-15, 26, 125)"/>
+  </g>
+
+  <!-- Crocodile/Lizard silhouette with G integrated -->
+  <g fill="url(#goldGradient)">
+    <!-- Main body forming the G shape -->
+    <path d="M85 55
+             C65 55 50 70 50 95
+             C50 120 65 135 90 135
+             L130 135
+             L130 115
+             L95 115
+             C90 115 85 110 85 100
+             L85 85
+             C85 80 90 75 100 75
+             L130 75
+             L130 55
+             L85 55
+             Z"
+          stroke="#1E293B"
+          stroke-width="2"/>
+
+    <!-- Crocodile head extending from G -->
+    <path d="M130 55
+             L155 55
+             C165 55 170 65 170 75
+             C170 85 165 95 155 95
+             L145 95
+             L145 75
+             L130 75
+             Z"
+          stroke="#1E293B"
+          stroke-width="2"/>
+
+    <!-- Crocodile eye -->
+    <circle cx="150" cy="72" r="6" fill="#1E293B"/>
+    <circle cx="152" cy="70" r="2" fill="#FFF8F5"/>
+
+    <!-- Crocodile teeth/jaw line -->
+    <path d="M155 95 L155 105 L170 100 L170 95" fill="none" stroke="#1E293B" stroke-width="2"/>
+    <path d="M155 95 L170 100" fill="none" stroke="#FFF8F5" stroke-width="1"/>
+
+    <!-- Tail curling back (part of G) -->
+    <path d="M50 95
+             L30 95
+             C20 95 15 100 15 110
+             L15 120
+             L35 120
+             L35 105
+             L50 105"
+          stroke="#1E293B"
+          stroke-width="2"/>
+
+    <!-- Scale texture on body -->
+    <g fill="none" stroke="#1E293B" stroke-width="1" opacity="0.4">
+      <path d="M60 75 L75 75"/>
+      <path d="M60 85 L80 85"/>
+      <path d="M60 95 L80 95"/>
+      <path d="M60 105 L85 105"/>
+      <path d="M60 115 L85 115"/>
+    </g>
+
+    <!-- Legs -->
+    <path d="M65 135 L55 155 L65 155 L70 135" stroke="#1E293B" stroke-width="2"/>
+    <path d="M100 135 L95 155 L105 155 L110 135" stroke="#1E293B" stroke-width="2"/>
+  </g>
+
+  <!-- Savannah grass at bottom -->
+  <g fill="#1E293B" opacity="0.7">
+    <path d="M0 200 L5 170 L10 200"/>
+    <path d="M10 200 L18 165 L25 200"/>
+    <path d="M20 200 L28 175 L35 200"/>
+    <path d="M165 200 L172 170 L180 200"/>
+    <path d="M175 200 L185 165 L195 200"/>
+    <path d="M185 200 L190 175 L200 200"/>
+  </g>
+
+  <!-- Flying birds in distance -->
+  <g fill="none" stroke="#1E293B" stroke-width="1.5" opacity="0.5">
+    <path d="M140 45 Q145 42 150 45 Q155 42 160 45"/>
+    <path d="M120 50 Q123 48 126 50 Q129 48 132 50"/>
+    <path d="M155 35 Q157 33 159 35 Q161 33 163 35"/>
+  </g>
+</svg>

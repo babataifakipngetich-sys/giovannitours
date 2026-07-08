@@ -13,7 +13,10 @@
 <!-- TopNavBar -->
 <nav class="fixed top-0 w-full z-50 bg-transparent backdrop-blur-xl dark:bg-transparent shadow-sm border-b border-white/10">
 <div class="flex justify-between items-center px-gutter py-4 max-w-container-max mx-auto">
-<a class="font-display-lg text-headline-md font-bold text-primary dark:text-primary-fixed" href="#">Giovanni Tours</a>
+<a class="flex items-center gap-3" href="#">
+<img src="assets/images/logo.svg" alt="Giovanni Tours Logo" class="h-12 w-12"/>
+<span class="font-display-lg text-headline-md font-bold text-primary dark:text-primary-fixed">Giovanni Tours</span>
+</a>
 <div class="hidden md:flex gap-8 items-center">
 <a class="font-label-lg text-label-lg text-primary border-b-2 border-primary pb-1" href="#destinations">Destinations</a>
 <a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors" href="#experiences">Experiences</a>
@@ -26,12 +29,42 @@
 </button>
 </div>
 </nav>
-<!-- Hero Section -->
+<!-- Hero Section with Carousel -->
 <header class="relative h-screen w-full flex items-center overflow-hidden">
-<div class="absolute inset-0 z-0">
-<div class="absolute inset-0 bg-gradient-to-r from-on-background/80 to-transparent z-10"></div>
-<div class="w-full h-full bg-cover bg-center" data-alt="A wide cinematic shot of a golden African savannah at sunset, with a silhouette of a lone acacia tree against a vibrant orange and deep blue sky." style="background-image: url('https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&w=1920&q=80')"></div>
+<!-- Carousel Slides -->
+<div class="hero-carousel absolute inset-0 z-0">
+<!-- Slide 1 - Lions at sunset -->
+<div class="carousel-slide absolute inset-0 opacity-100 transition-opacity duration-1000" data-index="0">
+<div class="absolute inset-0 bg-gradient-to-r from-on-background/80 via-on-background/40 to-transparent z-10"></div>
+<div class="w-full h-full bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1546182990-dffe3be2a64d?auto=format&fit=crop&w=1920&q=80')"></div>
 </div>
+<!-- Slide 2 - Elephants silhouetted at sunset -->
+<div class="carousel-slide absolute inset-0 opacity-0 transition-opacity duration-1000" data-index="1">
+<div class="absolute inset-0 bg-gradient-to-r from-on-background/80 via-on-background/40 to-transparent z-10"></div>
+<div class="w-full h-full bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1517420879524-86d64ac2f339?auto=format&fit=crop&w=1920&q=80')"></div>
+</div>
+<!-- Slide 3 - Giraffes at golden hour -->
+<div class="carousel-slide absolute inset-0 opacity-0 transition-opacity duration-1000" data-index="2">
+<div class="absolute inset-0 bg-gradient-to-r from-on-background/80 via-on-background/40 to-transparent z-10"></div>
+<div class="w-full h-full bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1520124442480-b5c60b0f80c2?auto=format&fit=crop&w=1920&q=80')"></div>
+</div>
+<!-- Slide 4 - African savannah sunset with acacia -->
+<div class="carousel-slide absolute inset-0 opacity-0 transition-opacity duration-1000" data-index="3">
+<div class="absolute inset-0 bg-gradient-to-r from-on-background/80 via-on-background/40 to-transparent z-10"></div>
+<div class="w-full h-full bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&w=1920&q=80')"></div>
+</div>
+<!-- Slide 5 - Zebras at sunset -->
+<div class="carousel-slide absolute inset-0 opacity-0 transition-opacity duration-1000" data-index="4">
+<div class="absolute inset-0 bg-gradient-to-r from-on-background/80 via-on-background/40 to-transparent z-10"></div>
+<div class="w-full h-full bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1518709766631-a6a8f454496e?auto=format&fit=crop&w=1920&q=80')"></div>
+</div>
+<!-- Slide 6 - Cheetah in golden light -->
+<div class="carousel-slide absolute inset-0 opacity-0 transition-opacity duration-1000" data-index="5">
+<div class="absolute inset-0 bg-gradient-to-r from-on-background/80 via-on-background/40 to-transparent z-10"></div>
+<div class="w-full h-full bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1456926631375-92c8a1b3446a?auto=format&fit=crop&w=1920&q=80')"></div>
+</div>
+</div>
+
 <div class="relative z-20 px-gutter max-w-container-max mx-auto w-full reveal">
 <h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-white mb-stack-md">Giovanni Tours &amp; Travels</h1>
 <p class="font-body-lg text-body-lg text-white/80 max-w-2xl mb-stack-lg italic">
@@ -47,6 +80,25 @@
                 </button>
 </div>
 </div>
+
+<!-- Carousel Indicators -->
+<div class="absolute bottom-24 left-1/2 -translate-x-1/2 z-20 flex gap-3">
+<button class="carousel-indicator w-3 h-3 rounded-full bg-white/50 hover:bg-white/80 transition-all" data-index="0" aria-label="Go to slide 1"></button>
+<button class="carousel-indicator w-3 h-3 rounded-full bg-white/50 hover:bg-white/80 transition-all" data-index="1" aria-label="Go to slide 2"></button>
+<button class="carousel-indicator w-3 h-3 rounded-full bg-white/50 hover:bg-white/80 transition-all" data-index="2" aria-label="Go to slide 3"></button>
+<button class="carousel-indicator w-3 h-3 rounded-full bg-white/50 hover:bg-white/80 transition-all" data-index="3" aria-label="Go to slide 4"></button>
+<button class="carousel-indicator w-3 h-3 rounded-full bg-white/50 hover:bg-white/80 transition-all" data-index="4" aria-label="Go to slide 5"></button>
+<button class="carousel-indicator w-3 h-3 rounded-full bg-white/50 hover:bg-white/80 transition-all" data-index="5" aria-label="Go to slide 6"></button>
+</div>
+
+<!-- Carousel Navigation Arrows -->
+<button class="carousel-prev absolute left-6 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-white/20 backdrop-blur-md border border-white/30 text-white hover:bg-white/30 transition-all flex items-center justify-center opacity-0 hover:opacity-100" aria-label="Previous slide">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="carousel-next absolute right-6 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-white/20 backdrop-blur-md border border-white/30 text-white hover:bg-white/30 transition-all flex items-center justify-center opacity-0 hover:opacity-100" aria-label="Next slide">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+
 <div class="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 animate-bounce">
 <span class="material-symbols-outlined text-white/50 text-4xl">expand_more</span>
 </div>
@@ -66,7 +118,7 @@
 </div>
 <div class="relative reveal delay-200">
 <div class="aspect-[4/5] rounded-xl overflow-hidden shadow-2xl">
-<img class="w-full h-full object-cover" data-alt="A safari vehicle with passengers observing a lion in the African wild, guided by a professional safari guide." src="https://images.unsplash.com/photo-1709402606682-400133d92ab2?auto=format&fit=crop&w=1200&q=80"/>
+<img class="w-full h-full object-cover" data-alt="A leopard resting on a tree branch at golden hour in the African savannah." src="https://images.unsplash.com/photo-1456926631375-92c8a1b3446a?auto=format&fit=crop&w=1200&q=80"/>
 </div>
 <div class="absolute -bottom-10 -left-10 bg-surface-container-highest p-8 rounded-xl shadow-lg hidden lg:block border border-outline-variant/20">
 <p class="font-display-lg text-headline-md text-primary">15+ Years</p>
@@ -111,7 +163,7 @@
 <!-- Bento-style Grid -->
 <div class="grid grid-cols-1 md:grid-cols-12 gap-6 h-[800px] md:h-[600px] reveal delay-200">
 <div class="md:col-span-8 relative group overflow-hidden rounded-2xl">
-<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="A high-action shot of a luxury jet ski cutting through crystal-clear turquoise ocean water at high speed." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMHq3-I1--p7xcUcrZbXOobE3GnSckfuUGcBCwRmSoOGrd8IkxVChJOuWz9lzhtSYoDGOuYBM3z_tfwGfAqL4X6hIVu1c2TKWd8K_wie3oiZGCNol_sPBe84roUhd8l8YTWGi_TXtgbuKUFhJqFN7tpBkr8UFI46I3RjUZznVW71sKAMPfHVI_b9wnGxTyK0cpf8oKNgE3Vy3vEnc7_GzVJ68ERz85L9dGnkoKPGbdtHsFGUgYZSZF1w"/>
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="A stunning coastal sunset over the Indian Ocean with a traditional dhow sailing boat silhouetted against the golden sky." src="https://images.unsplash.com/photo-150752750-2b2eef2bb9b3?auto=format&fit=crop&w=1920&q=80"/>
 <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex flex-col justify-end p-10">
 <span class="bg-primary/20 backdrop-blur-md text-primary-fixed border border-primary/30 px-4 py-1 rounded-full text-xs font-bold w-fit mb-4">COASTAL</span>
 <h3 class="text-white font-headline-lg text-headline-md">The Azure Expedition</h3>
@@ -120,7 +172,7 @@
 <div class="absolute top-6 right-6 bg-primary text-on-primary px-4 py-2 rounded-full font-bold shadow-lg">From $450</div>
 </div>
 <div class="md:col-span-4 relative group overflow-hidden rounded-2xl">
-<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Two giraffes standing among savanna trees, representing the Big Five safari trail." src="https://images.unsplash.com/photo-1520124442480-b5c60b0f80c2?auto=format&fit=crop&w=1000&q=80"/>
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="A lion resting in the golden grass at sunset, representing the Big Five safari trail." src="https://images.unsplash.com/photo-1546182990-dffe3be2a64d?auto=format&fit=crop&w=1000&q=80"/>
 <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex flex-col justify-end p-8">
 <span class="bg-tertiary-container/20 backdrop-blur-md text-tertiary-fixed border border-tertiary-fixed/30 px-4 py-1 rounded-full text-xs font-bold w-fit mb-4">SAFARI</span>
 <h3 class="text-white font-headline-md text-headline-md">Big Five Trail</h3>
@@ -155,19 +207,19 @@
 <div class="px-4 md:px-gutter max-w-[1400px] mx-auto reveal delay-200">
 <div class="masonry-grid">
 <div class="masonry-item rounded-xl overflow-hidden relative group">
-<img class="w-full h-full object-cover" data-alt="A bird's-eye view of a luxury catamaran anchored in a secluded turquoise cove." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBQj_dy4Ckp4eVbbtoCC9dDeeXhYtiSj5cjJHHDrLMH_PHjB1Ih1ibR1R5GyScZloBOkbpVRAcLhQwi2rBSbNjAL-IaelZbHXkj0MdkyI_H0trmZE3zkcYGOV4QAWp-GvWwyD4C_o15ibVG8n0rumdUu4s4P4b4KwWWDt-QSdRzbW-hlnCWrW9oDOMy4i6-yuXIwJk3OMJCuOWNNNMe_Pw2s6dT6SX7m-ioY1pQBUvqjKhOpe0lvI4iQ"/>
+<img class="w-full h-full object-cover" data-alt="A spectacular African sunset with acacia trees silhouetted against the orange and purple sky." src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&w=1200&q=80"/>
 </div>
 <div class="masonry-item rounded-xl overflow-hidden relative group">
-<img class="w-full h-full object-cover" data-alt="An interior shot of a luxury safari tent at night, illuminated by warm lanterns." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPkSw6qYcnap0Dhqfy8V8t2waRek4Z9ZAM2Ow3dTLE6alYbQYxrtuT-EmfZFKq87ggPf23DtHqg6x4wlwM3phb3qdIVYT5COmZiKiTAkM7X3SEtrSHNMftWCzbpUlsTHbx4lz6o91-rU7SgpwlHVtTF-8F3Wma4_me98Tz9FO1NFlCTrIVC1OxiwytkTBKYrMgGduM0E6epjtgv8yQ4pr6l42eBM9a8Cb3v2_PCLG-LAT3-yhCdjHeog"/>
+<img class="w-full h-full object-cover" data-alt="A herd of elephants walking through the golden savannah grass at sunset." src="https://images.unsplash.com/photo-1517420879524-86d64ac2f339?auto=format&fit=crop&w=1200&q=80"/>
 </div>
 <div class="masonry-item rounded-xl overflow-hidden relative group">
-<img class="w-full h-full object-cover" data-alt="A dramatic shot of a herd of elephants crossing a dusty trail at dawn, with the morning sun on the horizon." src="https://images.unsplash.com/photo-1578326626553-39f72c545b07?auto=format&fit=crop&w=1200&q=80"/>
+<img class="w-full h-full object-cover" data-alt="Giraffes silhouetted against a vibrant orange African sunset." src="https://images.unsplash.com/photo-1520124442480-b5c60b0f80c2?auto=format&fit=crop&w=1200&q=80"/>
 </div>
 <div class="masonry-item rounded-xl overflow-hidden relative group">
-<img class="w-full h-full object-cover" data-alt="A group of luxury travelers enjoying a sunset dinner on a private deck overlooking the ocean." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBgWrkxEHzvrs0MLY8VdVuf_6hV0Rh4nSFR6xMWrY1f1XtThA0tYxEcI28WZlBeT02VRwl3tIgdD3k2pY2GoIPSB0Vq5GKipcZlpMUjezk2rz4V8gqLZPVccFTBgJ9pc8bCuAPUM2ihCReLIMBQTrVhRqD8qJ0tQIE_tkfhGAVS4H7YBFu2GsAm-4TbKLoSRts-1HjCNH1hWZkZkh2ou6R0DrxqgnjhFjQiN4lKNDSvJqbRYplc490Wg"/>
+<img class="w-full h-full object-cover" data-alt="Zebras grazing on the savannah plains with the sun setting in the distance." src="https://images.unsplash.com/photo-1518709766631-a6a8f454496e?auto=format&fit=crop&w=1200&q=80"/>
 </div>
 <div class="masonry-item rounded-xl overflow-hidden relative group">
-<img class="w-full h-full object-cover" data-alt="Macro detail of a high-end diving watch on a wrist, with blue ocean water in the blurred background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2cHLsMozgHjSC7eMyfedFwkwWXt5gOxzvSC6gmhW1p3u38Y4BQKRqW5bk7_xFOQ3T5BzEOSLsyqK0581tFr9DHdH0bcFNn_mmx-93zo4kewJJ-fjZha0txVi27Xlan_AfRrzp8I8Kwf5o-bdU_LA_ASKiBHqdXxjp9ZDiNzpWdg4tBRoFGENMI1gTOM1TGQ7GMTesXYWPU8BS67ETO3cgqLnBAHbe-oSj6K35NCMXUsMYPzStvYxJ8A"/>
+<img class="w-full h-full object-cover" data-alt="The sun setting over an African waterhole with wildlife gathering for evening drink." src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&w=1200&q=80"/>
 </div>
 </div>
 </div>
@@ -290,7 +342,10 @@
 <footer class="bg-on-background dark:bg-surface-container-lowest w-full border-t border-white/5">
 <div class="grid grid-cols-1 md:grid-cols-4 gap-stack-lg px-gutter py-section-padding max-w-container-max mx-auto">
 <div class="md:col-span-1">
-<a class="font-display-lg text-headline-md text-primary-fixed mb-6 block" href="#">Giovanni Tours</a>
+<a class="flex items-center gap-3 mb-6" href="#">
+<img src="assets/images/logo.svg" alt="Giovanni Tours Logo" class="h-14 w-14"/>
+<span class="font-display-lg text-headline-md text-primary-fixed">Giovanni Tours</span>
+</a>
 <p class="text-surface-variant/60 font-body-md pr-4">Crafting high-end adventures across the African wild and the deep blue since 2008.</p>
 </div>
 <div>
